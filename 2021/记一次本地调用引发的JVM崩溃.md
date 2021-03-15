@@ -66,6 +66,7 @@ libb --> liba -->JVM crash
 * war包中结构包含了WEB-INF、classes、lib三个文件夹，如果项目为多module结构，非servlet的module将会打包为jar放在lib下。
 * 对于同一个相对路径下的so文件，可能出现出人意料的加载。
 * 单元测试下，idea直接将项目中的so文件放在test-classes目录下，因此加载的行为是可预测的。
+* class.getClassLoader().getResources()方法可以查看应用内的同名资源。
 
 ## 总结
 * 生产JVM崩溃的异常首要排查目标是catalina.out和hs_err_pid.log文件
