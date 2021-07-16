@@ -3,8 +3,7 @@
 * 应用运行在tomcat上，并使用JNA调用了liba.so中的本地方法
 
 ## 症状综述
-1. 本地windows上使用dll正常，但发布生产时JVM崩溃
-2. 测试linux环境下使用同样正常，无法复现崩溃
+1. 本地windows和linux环境下使用同样正常，运行部分数据调用本地方法会触发JVM崩溃
 
 ## 排查过程
 1. 根据上一次的经验，首先排查catalina.out和hs_err_pid.log文件，发现出现以下报错
